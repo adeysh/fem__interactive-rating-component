@@ -1,0 +1,7 @@
+@use '../abstracts' as a;
+
+.wrapper {
+    width: min(a.rem(1110), (100% - a.rem(40)));
+    background: #252D37;
+    background: radial-gradient(circle at top, #232A34 0%, #181E27 100%);
+}

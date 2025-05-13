@@ -9,4 +9,5 @@ body {
     font-family: var(--ff);
     font-size: var(--fs-body);
     @include a.flexbox($align: center, $justify: center);
+    background-color: var(--Woodsmoke);
 }
