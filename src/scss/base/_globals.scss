@@ -1,0 +1,12 @@
+@use '../abstracts' as a;
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--ff);
+    font-size: var(--fs-body);
+    @include a.flexbox($align: center, $justify: center);
+}
