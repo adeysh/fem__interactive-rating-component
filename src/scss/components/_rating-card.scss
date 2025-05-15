@@ -44,6 +44,7 @@
         &:hover {
             background-color: var(--Ecstasy);
             color: var(--Ebony-Clay);
+            cursor: pointer;
         }
     }
 
@@ -63,6 +64,7 @@
         &:focus-visible {
             background-color: var(--White);
             outline: 2px solid var(--Ecstasy);
+            cursor: pointer;
         }
     }
 
@@ -89,5 +91,29 @@
     &__thankyou-description {
         color: var(--Gray-Chateau);
         text-align: center;
+    }
+
+    &__goback-btn {
+        @include a.flexbox($align: center, $gap: a.rem(10));
+        border: none;
+        background-color: var(--Ebony-Clay);
+        border-radius: a.rem(32);
+        color: var(--White);
+        font-weight: var(--fw-bold);
+        padding: a.rem(5) a.rem(14);
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--Ecstasy);
+            cursor: pointer;
+
+            svg {
+                path {
+
+                    fill: var(--Ebony-Clay);
+                }
+            }
+        }
     }
 }

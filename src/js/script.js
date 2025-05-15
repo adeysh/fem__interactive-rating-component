@@ -5,12 +5,20 @@ const selectedRating = document.getElementById("selected-rating");
 const ratingLabels = document.querySelectorAll(".rating-card__rating-label");
 const ratingRadioInputs = document.querySelectorAll(".rating-card__rating-input");
 const errorEl = document.getElementById("error");
+const goBackBtn = document.getElementById("goback-btn");
 
 function showThankyouState(rating) {
     ratingCard.classList.toggle("active");
     thankyouRatingCard.classList.toggle("active");
     thankyouRatingCard.setAttribute("aria-hidden", "false");
     selectedRating.textContent = rating;
+}
+
+function showRatingState() {
+    ratingCard.classList.toggle("active");
+    thankyouRatingCard.classList.toggle("active");
+    ratingForm.reset();
+    errorEl.classList.toggle("hidden", true);
 }
 
 function showError() {
@@ -35,6 +43,10 @@ for (const radio of ratingRadioInputs) {
         errorEl.classList.toggle("hidden", true);
     });
 }
+
+goBackBtn.addEventListener("click", () => {
+    showRatingState();
+})
 
 
 // keyboard accessibility
