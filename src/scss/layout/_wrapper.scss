@@ -2,6 +2,8 @@
 
 .wrapper {
     width: min(a.rem(1110), (100% - a.rem(40)));
+    max-inline-size: a.rem(400);
     background: #252D37;
     background: radial-gradient(circle at top, #232A34 0%, #181E27 100%);
+    border-radius: a.rem(24);
 }

@@ -1,0 +1,34 @@
+@use '../abstracts' as a;
+
+.rating-card--rating-state {
+    display: none;
+
+    &.active {
+        @include a.flexbox($direction: column, $align: flex-start, $justify: center, $gap: a.rem(20));
+    }
+}
+
+.rating-card--thankyou-state {
+    display: none;
+
+    &.active {
+        @include a.flexbox($direction: column, $align: center, $justify: center, $gap: a.rem(20));
+    }
+}
+
+.rating-card__form {
+    @include a.flexbox($direction: column, $gap: a.rem(20));
+    width: 100%;
+}
+
+.error {
+    align-self: center;
+    color: var(--White);
+    background-color: var(--Ebony-Clay);
+    padding: a.rem(5) a.rem(14);
+    border-radius: a.rem(32);
+}
+
+.hidden {
+    display: none;
+}

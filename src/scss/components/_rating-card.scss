@@ -1,0 +1,93 @@
+@use '../abstracts' as a;
+
+.rating-card {
+    padding: a.rem(28);
+
+    /* rating state */
+
+    &__icon {
+        padding: a.rem(12);
+        background-color: var(--Ebony-Clay);
+        border-radius: 50%;
+    }
+
+    &__title {
+        color: var(--White);
+        font-size: var(--fs-medium);
+        font-weight: var(--fw-bold);
+    }
+
+    &__description {
+        color: var(--Gray-Chateau);
+    }
+
+    &__form-rating-btns {
+        @include a.flexbox($align: center, $justify: space-between);
+    }
+
+    &__rating-label {
+        width: 40px;
+        height: 40px;
+        line-height: 1;
+        @include a.flexbox($align: center, $justify: center);
+        background-color: var(--Ebony-Clay);
+        color: var(--Gray-Chateau);
+        border-radius: 50%;
+        font-weight: var(--fw-bold);
+        transition: all 0.3s ease-in-out;
+
+        &:has(input:checked) {
+            background-color: var(--White);
+            color: var(--Ebony-Clay);
+        }
+
+        &:hover {
+            background-color: var(--Ecstasy);
+            color: var(--Ebony-Clay);
+        }
+    }
+
+    &__submit-btn {
+        border: none;
+        outline: 2px solid transparent;
+        padding: a.rem(10) a.rem(12);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: var(--fw-bold);
+        letter-spacing: a.rem(1.5);
+        background-color: var(--Ecstasy);
+        border-radius: a.rem(32);
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--White);
+            outline: 2px solid var(--Ecstasy);
+        }
+    }
+
+    /* thankyou state */
+
+    &__icon--large {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    &__rating-summary {
+        color: var(--Ecstasy);
+        background-color: var(--Ebony-Clay);
+        padding: a.rem(8) a.rem(16);
+        border-radius: a.rem(32);
+    }
+
+    &__thankyou-title {
+        color: var(--White);
+        font-size: var(--fs-medium);
+        font-weight: var(--fw-bold);
+    }
+
+    &__thankyou-description {
+        color: var(--Gray-Chateau);
+        text-align: center;
+    }
+}

@@ -11,3 +11,30 @@ body {
     @include a.flexbox($align: center, $justify: center);
     background-color: var(--Woodsmoke);
 }
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+// .visually-hidden {
+//     clip: rect(0 0 0 0);
+//     clip-path: inset(50%);
+//     height: 1px;
+//     overflow: hidden;
+//     position: absolute;
+//     white-space: nowrap;
+//     width: 1px;
+// }
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    display: none;
+}
