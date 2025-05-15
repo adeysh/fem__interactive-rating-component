@@ -6,9 +6,10 @@ body {
 }
 
 body {
+    position: relative;
     font-family: var(--ff);
     font-size: var(--fs-body);
-    @include a.flexbox($align: center, $justify: center);
+    @include a.flexbox($direction: column, $align: center, $justify: center);
     background-color: var(--Woodsmoke);
 }
 

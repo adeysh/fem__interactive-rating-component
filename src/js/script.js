@@ -9,10 +9,12 @@ const errorEl = document.getElementById("error");
 function showThankyouState(rating) {
     ratingCard.classList.toggle("active");
     thankyouRatingCard.classList.toggle("active");
+    thankyouRatingCard.setAttribute("aria-hidden", "false");
     selectedRating.textContent = rating;
 }
 
 function showError() {
+    errorEl.setAttribute("aria-hidden", "false");
     errorEl.classList.toggle("hidden", false);
 }
 
@@ -37,7 +39,10 @@ for (const radio of ratingRadioInputs) {
 
 // keyboard accessibility
 ratingForm.addEventListener("keydown", (e) => {
-    if (e.key == " " || e.key == "Enter") {
+    const key = e.key;
+    if ((key == " " || key == "Enter") &&
+        (e.target.classList.contains("rating-card__rating-label"))
+    ) {
         e.target.click();
     }
 });
