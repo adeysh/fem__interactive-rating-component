@@ -17,7 +17,7 @@
 }
 
 .rating-card__form {
-    @include a.flexbox($direction: column, $gap: a.rem(20));
+    @include a.flexbox($direction: column, $gap: a.rem(24));
     width: 100%;
 }
 
